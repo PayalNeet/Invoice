@@ -63,7 +63,7 @@ public class OldObjectUtilities {
 	}
 	
 	
-	public void typeInElement3(String xpath, String content) throws ElementNotLocatedOnUIException {
+	public void typeInElement4(String xpath, String content) throws ElementNotLocatedOnUIException {
 		typeInElement2(xpath, content, Setup.defaultTimeOutForObjectWait);	}
 	
 	public void typeInElement2(String xpath, String content, int timeoutInSec) throws ElementNotLocatedOnUIException {
