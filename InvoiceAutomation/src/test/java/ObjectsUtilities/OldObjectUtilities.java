@@ -63,10 +63,10 @@ public class OldObjectUtilities {
 	}
 	
 	
-	public void typeInElement4(String xpath, String content) throws ElementNotLocatedOnUIException {
-		typeInElement2(xpath, content, Setup.defaultTimeOutForObjectWait);	}
+	public void typeInElement1(String xpath, String content) throws ElementNotLocatedOnUIException {
+		typeInElement1(xpath, content, Setup.defaultTimeOutForObjectWait);	}
 	
-	public void typeInElement2(String xpath, String content, int timeoutInSec) throws ElementNotLocatedOnUIException {
+	public void typeInElement1(String xpath, String content, int timeoutInSec) throws ElementNotLocatedOnUIException {
 	//	Reporter__log("Attempting to type..");
 		if (waitForObject(xpath)) {
 			driver.findElement(By.xpath(xpath)).clear();
