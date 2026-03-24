@@ -1,0 +1,5 @@
+
+login.username = //label[contains(normalize-space(),'User')]/following::input[1]
+login.password =(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart css-1x51dt5-MuiInputBase-input-MuiInput-input'])[2]
+login.button = //button[normalize-space()='Log In']
+
