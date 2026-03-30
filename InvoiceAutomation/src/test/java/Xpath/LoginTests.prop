@@ -3,3 +3,25 @@ login.username = //label[contains(normalize-space(),'User')]/following::input[1]
 login.password =(//input[@class='MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart css-1x51dt5-MuiInputBase-input-MuiInput-input'])[2]
 login.button = //button[normalize-space()='Log In']
 
+
+client.master1 =//div[@aria-label='Master']
+client.master = //span[normalize-space()='Master']/ancestor::div[@role='button']
+client.accountMaster = //span[normalize-space()='Account Master']
+client.clientMaster = //span[normalize-space()='Client Master']
+client.addClient = //button[.//span[normalize-space()='Add Client'] or normalize-space()='Add Client']
+client.name = //label[contains(text(),'Client Name')]/following::input[1]
+client.currency=//div[@role='combobox'][normalize-space()='Rupees']
+client.currencyOptions=//ul[@role='listbox']/li
+client.verticalDropdown = //label[contains(text(),'Business Vertical')]/following::div[@role='combobox'][1]
+client.verticalOption = //ul[@role='listbox']//li
+client.clusterHead= (//div[@role='combobox'])[4]
+client.clusteroptions=//ul[@role='listbox']//li
+client.pan = //label[contains(text(),'PAN')]/following::input[1]
+client.email = //label[contains(text(),'Email Id')]/following::input[1]
+client.address = //label[contains(text(),'Billing Address Line 1')]/following::textarea[1]
+client.address1=/html[1]/body[1]/div[2]/div[3]/div[2]/div[1]/div[8]/div[1]/div[1]/textarea[1]
+client.cityDropdown = //label[contains(text(),'City')]/following::div[@role='combobox'][1]
+client.cityOption = //ul[@role='listbox']//li
+client.zipcode = //label[contains(text(),'Zip Code')]/following::input[1]
+client.submit = //button[normalize-space()='Submit']
+

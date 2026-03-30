@@ -6,8 +6,8 @@
     <classes>
       <class name="TestFiles.TestSteps">
         <methods>
-          <include name="login"/>
           <include name="setup"/>
+          <include name="addClientTest"/>
         </methods>
       </class> <!-- TestFiles.TestSteps -->
     </classes>

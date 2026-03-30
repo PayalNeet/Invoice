@@ -7,19 +7,21 @@ import org.testng.annotations.Test;
 import com.utilities.ObjectUtilities;
 import DataFiles.LoginCredentialToGetData;
 import DataFiles.XpathProgramesToGetData;
+import Tests.ClientMaster;
 import Tests.Login;
+import Tests.RandomGenerateData;
 import Tests.Setup;
 
 @Test
 public class TestSteps {
 
 	public static WebDriver driver;
-
 	XpathProgramesToGetData prop;
 	LoginCredentialToGetData prop1;
 	ObjectUtilities obj;
 
 	Login login;
+	 ClientMaster client;
 	
 	
 	@Parameters("url")
@@ -36,6 +38,9 @@ public class TestSteps {
 	    driver.get(url);        
 
 	    login = new Login();
+	   
+	    client = new ClientMaster(driver);
+	    
 
 	    prop = new XpathProgramesToGetData();
 	    prop1 = new LoginCredentialToGetData();
@@ -50,6 +55,41 @@ public class TestSteps {
 
 		
 	}
+	
+	@Test(priority = 02)
+	public void addClientTest() throws Exception {
 
+		client.clickonmaster();
+		
+		client.openClientMaster();
+
+		client.clickAddClient();
+		
+		String clientName = RandomGenerateData.generateClientName();
+	    client.enterClientName(clientName);
+	
+	    client.selectRandomCurrency();
+	    client.selectRandomvertical();
+	    client.selectClusterHead();
+	    String PanNo = RandomGenerateData.generatePan();
+	  client.enterPanNo(PanNo);
+	  
+	  String EmailId = RandomGenerateData.generateEmail();
+	  client.enterEmailId(EmailId);
+		
+	  String address = RandomGenerateData.generateAddress();
+	  client.enterAddress(address);
+	  
+	  String address1 = RandomGenerateData.generateAddress();
+	  client.enterAddress1(address1);
+	  
+	 client.selectRandomCity();
+	 
+	  String zipcode = RandomGenerateData.generateZipCode();   
+	client.enterZipcode(zipcode);
+	    
+	client.submitClient();
+	
+	}
 	
 }
