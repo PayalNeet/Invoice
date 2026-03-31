@@ -7,7 +7,7 @@
       <class name="TestFiles.TestSteps">
         <methods>
           <include name="setup"/>
-          <include name="addClientTest"/>
+          <include name="selectclientdropdown"/>
         </methods>
       </class> <!-- TestFiles.TestSteps -->
     </classes>

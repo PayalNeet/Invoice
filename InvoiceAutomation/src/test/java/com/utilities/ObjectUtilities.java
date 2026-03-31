@@ -32,20 +32,6 @@ public class ObjectUtilities {
 
   
 
-    public void login(String username, String password) throws IOException, Exception {
-
-        typeInElement(prop.getDataFromFileNavigation("login_username"), username);
-        typeInElement(prop.getDataFromFileNavigation("login_password"), password);
-        clickElement(prop.getDataFromFileNavigation("login.button"));
-
-       
-    }
-    
-    public void openMasterMenu() throws IOException, Exception {
-
-        clickElement1(prop.getDataFromFileNavigation("client.master "));
-
-    }
     
     
     public void clickElement1(String xpath) {
@@ -65,29 +51,9 @@ public class ObjectUtilities {
             js.executeScript("arguments[0].click();", element);
         }
     }
-    public void openAccountMaster() throws IOException, Exception {
-
-        clickElement(prop.getDataFromFileNavigation("account_master"));
-
-    }
     
-    public void openClientMaster() throws IOException, Exception {
-
-        clickElement(prop.getDataFromFileNavigation("client_master"));
-
-    }
-
-    public void clickAddClient() throws IOException, Exception {
-
-        clickElement(prop.getDataFromFileNavigation("add_client"));
-
-    }
-    public void enterClientName(String name) throws IOException, Exception {
-
-        typeInElement(prop.getDataFromFileNavigation("client_name"), name);
-
-    }
     
+   
     public void selectRandomOption(By optionsLocator) {
 
         List<WebElement> options = driver.findElements(optionsLocator);
@@ -146,6 +112,8 @@ public class ObjectUtilities {
             throw new ElementNotLocatedOnUIException();
         }
     }
+   
+    
     }
 
 

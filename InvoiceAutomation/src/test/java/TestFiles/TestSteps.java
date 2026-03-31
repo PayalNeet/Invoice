@@ -9,6 +9,7 @@ import DataFiles.LoginCredentialToGetData;
 import DataFiles.XpathProgramesToGetData;
 import Tests.ClientMaster;
 import Tests.Login;
+import Tests.ProcessMaster;
 import Tests.RandomGenerateData;
 import Tests.Setup;
 
@@ -22,6 +23,7 @@ public class TestSteps {
 
 	Login login;
 	 ClientMaster client;
+	 ProcessMaster process;
 	
 	
 	@Parameters("url")
@@ -40,6 +42,7 @@ public class TestSteps {
 	    login = new Login();
 	   
 	    client = new ClientMaster(driver);
+	   process = new  ProcessMaster(driver);
 	    
 
 	    prop = new XpathProgramesToGetData();
@@ -58,9 +61,8 @@ public class TestSteps {
 	
 	@Test(priority = 02)
 	public void addClientTest() throws Exception {
-
-		client.clickonmaster();
 		
+		client.navigateToAccountMaster();
 		client.openClientMaster();
 
 		client.clickAddClient();
@@ -92,4 +94,26 @@ public class TestSteps {
 	
 	}
 	
+	
+	@Test(priority = 03)
+	public void openProcessMasterTest() throws Exception {
+
+	    process.navigateToAccountMaster();   
+	    process.openProcessMaster();        
+
+	}
+
+	@Test(priority = 04, dependsOnMethods = "openProcessMasterTest")
+	public void addProcessTest() throws Exception {
+
+	    process.clickAddProcess();           
+
+	}
+	@Test(priority = 05)
+	public void selectclientdropdown() throws Exception {
+		
+		process.selectclient();
+		
+	}
+		
 }

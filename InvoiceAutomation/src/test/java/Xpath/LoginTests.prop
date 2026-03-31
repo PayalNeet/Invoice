@@ -24,4 +24,7 @@ client.cityDropdown = //label[contains(text(),'City')]/following::div[@role='com
 client.cityOption = //ul[@role='listbox']//li
 client.zipcode = //label[contains(text(),'Zip Code')]/following::input[1]
 client.submit = //button[normalize-space()='Submit']
-
+process.process_master=//span[normalize-space()='Process Master']
+process.add_process_button=//button[.//span[normalize-space()='Add Process'] or normalize-space()='Add Process']
+process.client_dropdown=//label[contains(normalize-space(.),'Client Name')]/following::div[contains(@class,'MuiSelect-select') or @role='button'][1]
+process.clientOption=//ul[@role='listbox']//li

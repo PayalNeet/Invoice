@@ -1,7 +1,8 @@
 
 	package Tests;
 	 
-	import java.util.List;
+	import java.io.IOException;
+import java.util.List;
 	import java.util.Random;
 	 
 	import org.openqa.selenium.WebDriver;
@@ -26,21 +27,21 @@
 		    static ObjectUtilities obj = new ObjectUtilities();
 	 
 		
-		    
-		    
-		    public void clickonmaster () throws Exception {
-		    	obj.clickElement1(prop.GetdataFromPropFileAM("client.master1"));
-		      
-		    }
-	 
-		    public void openClientMaster() throws Exception {
-		    	
+		    public void navigateToAccountMaster() throws Exception {
+
+		        obj.clickElement1(prop.GetdataFromPropFileAM("client.master1"));
 		        obj.clickElement1(prop.GetdataFromPropFileAM("client.accountMaster"));
-		        obj.clickElement1(prop.GetdataFromPropFileAM("client.clientMaster"));
-	 
+
 		    }
 		    
-		   
+		    
+		    
+		    public void openClientMaster () throws IOException {
+		    	
+		    	 obj.clickElement1(prop.GetdataFromPropFileAM("client.clientMaster"));
+		    	
+		    }
+		    		   
 	 
 		    public void clickAddClient() throws Exception {
 	 
